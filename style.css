@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+body{
+    font-family: 'Segoe UI';
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.main-wrapper{
+    margin: 30px 0;
+    max-width: 100%;
+    width: 600px;
+    background: rgb(5, 5, 88);
+    border-radius: 10px;
+    padding: 30px 60px;
+    color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.main-wrapper h2{
+    color: #f3f3f3;
+    font-family: 'Times New Roman';
+    letter-spacing: 0.2rem;
+    padding: 15px 0;
+}
+
+.main-wrapper p{
+    padding: 15px 0;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+form{
+    padding: 15px 0;
+}
+
+form label, input, select{
+    font-family: Georgia;
+    font-size: 17px;
+    margin: 10px 0;
+    padding: 10px 25px;
+}
+
+form input, select{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+    display: block;
+    width: 100%;
+}
+
+form select{
+    position: relative;
+    color: #797775;
+}
+
+form input[type = text], form input[type = "number"]{
+    color: #797775;
+}
+
+.half-w{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.full-w{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.one-third-w{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.skills h3{
+    padding: 15px 0;
+}
+
+.full-w-skills h2{
+    font-family: Georgia;
+    font-size: 15px;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+}
+
+.skill label{
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.skill input[type = "checkbox"]{
+    transform: scale(2);
+}
+
+form input[type = "submit"]{
+    background: #2e2e2e;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    margin-top: 10px;
+    transition: opacity 0.5s linear;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+form input[type = "submit"]:hover{
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        padding: 20px 40px;
+    }
+    
+    .half-w, .one-third-w, .skill-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-wrapper {
+        padding: 15px 20px;
+    }
+}
